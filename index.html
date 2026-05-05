@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
     <title>DNews | Principais Notícias</title>
 </head>
 <body>
 
-    <div class="container-pesquisa">
-        <input type="text" id="palavra-chave" placeholder="Digite uma palavra-chave para pesquisar">
-        <button id="pesquisar">PESQUISAR</button>
-    </div>
-    
+    <nav class="navbar">
+        <div class="nav-menu">☰ MENU</div>
+        <div class="nav-brand">DNews</div>
+        <div></div>
+    </nav>
+
+    <main id="container-noticias" class="container-noticias">
+        <!-- cards gerados pelo JS -->
+    </main>
+
+    <footer class="footer">
+        <span>@2026 Todos os direitos reservados</span>
+    </footer>
+
 </body>
 </html>
