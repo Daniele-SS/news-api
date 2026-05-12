@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
     <title>DNews | Principais Notícias</title>
@@ -17,6 +16,11 @@
         <div class="nav-brand">DNews</div>
         <div></div>
     </nav>
+
+    <div class="container-pesquisa">
+        <input type="text" id="category" placeholder="Ex: tecnologia, esportes, saúde...">
+        <button id="btn-pesquisar">PESQUISAR</button>
+    </div>
 
     <main id="container-noticias" class="container-noticias">
         <!-- cards gerados pelo JS -->

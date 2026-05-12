@@ -5,25 +5,25 @@
 }
 
 body {
-    font-family: Akshar;
-    background: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #e8f0fe;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .navbar {
-    background: #0077FF;
+    background: #1565C0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    height: 60px;
+    height: 44px;
 }
 
 .nav-menu {
     color: white;
-    font-size: 30px;
+    font-size: 13px;
     font-weight: 500;
     cursor: pointer;
     display: flex;
@@ -32,27 +32,65 @@ body {
 }
 
 .nav-brand {
-    font-family: Akshar;
+    font-family: 'Bebas Neue', sans-serif;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 1px;
 }
 
-.label-desktop {
-    font-size: 30px;
+.container-pesquisa {
+    display: flex;
+    gap: 8px;
+    padding: 14px 20px 0;
+}
+
+.container-pesquisa input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border: 1px solid #c5cae9;
+    border-radius: 6px;
+    outline: none;
+    background: white;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+}
+
+.container-pesquisa input:focus {
+    border-color: #1565C0;
+}
+
+.container-pesquisa button {
+    padding: 8px 18px;
+    font-size: 13px;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
-    color: #666;
-    text-transform: uppercase;
+    background: #1565C0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
     letter-spacing: 0.5px;
-    padding: 12px 20px 4px;
+    transition: background 0.2s;
+}
+
+.container-pesquisa button:hover {
+    background: #0d47a1;
+}
+
+.container-pesquisa button:disabled {
+    background: #90a4ae;
+    cursor: not-allowed;
 }
 
 .container-noticias {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr;
     gap: 14px;
-    padding: 8px 20px 20px;
+    padding: 14px 20px 20px;
     flex: 1;
+    align-content: start;
 }
 
 .card {
@@ -62,22 +100,18 @@ body {
     border: 0.5px solid #c5cae9;
 }
 
-.card:first-child {
-    grid-row: span 1;
-}
-
 .card img {
     width: 100%;
     aspect-ratio: 16/10;
     object-fit: cover;
-    background: #1a1a2e; /* fallback se imagem não carregar */
+    background: #1a1a2e;
     display: block;
 }
 
 .card-text {
     background: #ffc8c8;
     padding: 10px 12px;
-    font-size: 20px;
+    font-size: 13px;
     color: #7a2020;
     font-weight: 500;
     line-height: 1.4;
@@ -88,119 +122,25 @@ body {
     border-left: 3px solid #e57373;
 }
 
+.mensagem-status {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 14px;
+    color: #666;
+}
+
 .footer {
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: Akshar;
-        background: white;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .navbar {
-        background: #0077FF;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 16px;
-        height: 60px;
-    }
-    
-    .nav-menu {
-        color: white;
-        font-size: 30px;
-        font-weight: 500;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-    
-    .nav-brand {
-        font-family: Akshar;
-        color: white;
-        font-size: 30px;
-        letter-spacing: 1px;
-    }
-    
-    .label-desktop {
-        font-size: 30px;
-        font-weight: 500;
-        color: #666;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        padding: 12px 20px 4px;
-    }
-    
-    .container-noticias {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr 1fr;
-        gap: 14px;
-        padding: 8px 20px 20px;
-        flex: 1;
-    }
-    
-    .card {
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 0.5px solid #c5cae9;
-    }
-    
-    .card:first-child {
-        grid-row: span 1;
-    }
-    
-    .card img {
-        width: 100%;
-        aspect-ratio: 16/10;
-        object-fit: cover;
-        background: #1a1a2e; /* fallback se imagem não carregar */
-        display: block;
-    }
-    
-    .card-text {
-        background: #ffc8c8;
-        padding: 10px 12px;
-        font-size: 20px;
-        color: #7a2020;
-        font-weight: 500;
-        line-height: 1.4;
-        min-height: 50px;
-    }
-    
-    .card:first-child .card-text {
-        border-left: 3px solid #e57373;
-    }
-    
-    .footer {
-        background: #0077FF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 16px;
-        height: 60px;
-        margin-top: auto;
-    }
-    
-    .footer span {
-        color: white;
-        font-size: 15px;
-    }    display: flex;
+    background: #1565C0;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 16px;
-    height: 60px;
+    height: 38px;
     margin-top: auto;
 }
 
 .footer span {
-    color: white;
-    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    font-size: 11px;
 }
