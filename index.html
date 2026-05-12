@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
     <title>DNews | Principais Notícias</title>
@@ -12,22 +12,83 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-menu">☰ MENU</div>
+        <div class="nav-left">
+            <button class="nav-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#" data-cat="general">Geral</a>
+                <a href="#" data-cat="nation">Nação</a>
+                <a href="#" data-cat="business">Economia</a>
+                <a href="#" data-cat="technology">Tecnologia</a>
+                <a href="#" data-cat="sports">Esportes</a>
+                <a href="#" data-cat="health">Saúde</a>
+            </div>
+        </div>
         <div class="nav-brand">DNews</div>
-        <div></div>
+        <div class="nav-right">
+            <div class="search-wrap">
+                <input type="text" id="category" placeholder="Buscar categoria...">
+                <button id="btn-pesquisar">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <div class="container-pesquisa">
-        <input type="text" id="category" placeholder="Ex: tecnologia, esportes, saúde...">
-        <button id="btn-pesquisar">PESQUISAR</button>
+    <!-- Barra de cotações -->
+    <div class="cotacoes-bar">
+        <div class="cotacoes-ticker" id="cotacoes-ticker">
+            <div class="cotacoes-inner" id="cotacoes-inner">
+                <!-- injetado pelo JS -->
+            </div>
+        </div>
     </div>
 
-    <main id="container-noticias" class="container-noticias">
-        <!-- cards gerados pelo JS -->
+    <!-- Breaking news -->
+    <div class="breaking-bar">
+        <span class="ao-vivo">● AO VIVO</span>
+        <div class="breaking-ticker">
+            <span id="breaking-text">Carregando manchetes...</span>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <span class="section-label">Notícias Nacionais</span>
+    </div>
+
+    <main class="page-content">
+        <!-- Bloco principal: hero + 4 secundários -->
+        <div id="container-noticias" class="container-noticias">
+            <!-- cards injetados pelo JS -->
+        </div>
+
+        <!-- Segunda fileira: 3 cards médios -->
+        <div class="section-header section-header--inner">
+            <span class="section-label" id="label-mais">Mais Notícias</span>
+        </div>
+        <div id="container-mais" class="container-mais">
+            <!-- cards injetados pelo JS -->
+        </div>
+
+        <!-- Terceira fileira: lista de notícias restantes -->
+        <div class="section-header section-header--inner">
+            <span class="section-label">Últimas</span>
+        </div>
+        <div id="container-lista" class="container-lista">
+            <!-- itens injetados pelo JS -->
+        </div>
     </main>
 
     <footer class="footer">
-        <span>@2026 Todos os direitos reservados</span>
+        <div class="footer-inner">
+            <span class="footer-brand">DNews</span>
+            <span class="footer-copy">@2026 Todos os direitos reservados</span>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+            </div>
+        </div>
     </footer>
 
 </body>
