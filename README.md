@@ -32,7 +32,7 @@ O **DNews** é uma interface moderna de notícias projetada com foco em performa
 
 2. **Obtenha uma Chave de API:**
 
-* Cadastre-se gratuitamente em GNews.io.
+* Cadastre-se gratuitamente em [GNews API](https://gnews.io/dashboard)
 
 * Copie sua API Key.
 
@@ -40,7 +40,7 @@ O **DNews** é uma interface moderna de notícias projetada com foco em performa
 
 Abra o arquivo app.js e substitua o valor da constante API_KEY:
 
-const API_KEY = 'SUA_CHAVE_AQUI';
+```const API_KEY = 'SUA_CHAVE_AQUI';```
 
 4.  **Execute:**
     *   Abra o `index.html` diretamente no seu navegador ou utilize a extensão *Live Server* no VS Code.
